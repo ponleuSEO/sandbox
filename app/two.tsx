@@ -42,6 +42,15 @@ export default function Two() {
               layout='responsive'
             />
           </div>
+          <div className='absolute left-[45%] top-[40%] w-[450px] '>
+            <Image
+              alt='card-5C.png'
+              src='/cards/card-5C.png'
+              width={0}
+              height={0}
+              layout='responsive'
+            />
+          </div>
         </div>
       </div>
     </div>
