@@ -1,15 +1,49 @@
-import React from 'react';
 import mountain from '@/public/phone.png';
 import Image from 'next/image';
+import React, { useEffect, useState, useRef } from 'react';
+import { MotionValue, useScroll } from 'framer-motion';
+import useParallax from './useParallax';
 export default function Six() {
+  const [y, setY] = useState<MotionValue | undefined>(undefined);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref });
+  // const y = useParallax(scrollYProgress, -300, 200);
+  console.log(y);
+  function Card(text: string, link: string) {
+    return (
+      <div className='h-screen'>
+        <div className='flex flex-row items-center'>
+          <div className='relative aspect-[6/5] h-screen'>
+            <Image src={link} fill alt='' />
+          </div>
+          <h1>{text}</h1>
+        </div>
+      </div>
+    );
+  }
+  useEffect(() => {
+    setY(scrollYProgress);
+  }, [scrollYProgress, y]);
   return (
-    <div className='flex flex-col items-center justify-center md:flex-row'>
-      <div>
-        <p className='text-4xl'>SSpay - 欢迎来到您的盛世</p>
-      </div>
-      <div className="relative aspect-square h-[400px] before:absolute before:left-1/2 before:top-1/2 before:h-[60%] before:w-[60%] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-red-500 before:blur-3xl before:content-[''] md:h-[600px]">
-        <Image fill alt='' src={mountain} sizes='100vw' />
-      </div>
+    <div className='flex flex-col'>
+      <div className='background'></div>
+      <p className='fixed top-0 text-3xl'>{y?.get()}</p>
+      {Card(
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque laudantium, nisi voluptas ea quam cumque quaerat eveniet voluptatem placeat. Inventore quam doloremque omnis aliquid natus libero deserunt. Quibusdam, illum inventore?',
+        '/girl2.png'
+      )}
+      {Card(
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque laudantium, nisi voluptas ea quam cumque quaerat eveniet voluptatem placeat. Inventore quam doloremque omnis aliquid natus libero deserunt. Quibusdam, illum inventore?',
+        '/girl2.png'
+      )}
+      {Card(
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque laudantium, nisi voluptas ea quam cumque quaerat eveniet voluptatem placeat. Inventore quam doloremque omnis aliquid natus libero deserunt. Quibusdam, illum inventore?',
+        '/girl3.png'
+      )}
+      {Card(
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque laudantium, nisi voluptas ea quam cumque quaerat eveniet voluptatem placeat. Inventore quam doloremque omnis aliquid natus libero deserunt. Quibusdam, illum inventore?',
+        '/girl3.png'
+      )}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <main className='h-screen'>
+      <main className='h-screen bg-red-500 '>
         {/* <ScrollAnimation></ScrollAnimation> */}
         <One></One>
         {/* <Two></Two> */}
@@ -48,10 +48,12 @@ export default function Home() {
           <Three></Three>
         </section> */}
         {/* <Four></Four> */}
-        <div className=''>
+        {/* <div className='h-full '>
           <Five></Five>
+        </div> */}
+        <div className='h-screen'>
+          <Six></Six>
         </div>
-        {/* <Six></Six> */}
       </main>
     </>
   );
