@@ -57,3 +57,16 @@ html {
   background: url('/bg2.png') center/cover fixed; /* Replace 'your-background-image.jpg' with your actual background image */
   z-index: -1;
 }
+
+.scroll-up-down {
+  animation: scroll-up-down 6000ms linear infinite;
+}
+
+@keyframes scroll-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}

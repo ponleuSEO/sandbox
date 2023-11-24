@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import React, { useEffect, useState, useRef } from 'react';
 import One from './one';
@@ -8,10 +7,10 @@ import Three from './three';
 import Four from './four';
 import Five from './five';
 import Six from './six';
+import Seven from './seven';
+import Eight from './component/Sidebar';
 
 export default function Home() {
-  const sectionRef = useRef<HTMLDivElement>(null); // Initialize the ref with the correct type
-
   // useEffect(() => {
   //   const observer = new IntersectionObserver(([entry]) => {
   //     if (entry.isIntersecting) {
@@ -39,21 +38,8 @@ export default function Home() {
 
   return (
     <>
-      <main className='h-screen bg-red-500 '>
-        {/* <ScrollAnimation></ScrollAnimation> */}
-        <One></One>
-        {/* <Two></Two> */}
-
-        {/* <section className='snap-normal'>
-          <Three></Three>
-        </section> */}
-        {/* <Four></Four> */}
-        {/* <div className='h-full '>
-          <Five></Five>
-        </div> */}
-        <div className='h-screen'>
-          <Six></Six>
-        </div>
+      <main className='bg-white'>
+        <Eight></Eight>
       </main>
     </>
   );
