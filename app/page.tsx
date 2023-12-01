@@ -8,7 +8,8 @@ import Four from './four';
 import Five from './five';
 import Six from './six';
 import Seven from './seven';
-import Eight from './component/Sidebar';
+import Eight from './eight';
+import Link from 'next/link';
 
 export default function Home() {
   // useEffect(() => {
@@ -38,8 +39,10 @@ export default function Home() {
 
   return (
     <>
-      <main className='bg-white'>
-        <Eight></Eight>
+      <main className='h-[500vh]'>
+        <div className='h-screen bg-red-500 text-5xl'>Hello</div>
+        <Eight />
+        <div className='h-screen bg-red-500 text-5xl'>Hello</div>
       </main>
     </>
   );
