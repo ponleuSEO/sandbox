@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <main className='h-[500vh]'>
+      <main className='h-full'>
         <div className='h-screen bg-red-500 text-5xl'>Hello</div>
         <Eight />
         <div className='h-screen bg-red-500 text-5xl'>Hello</div>
