@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-export default function eight() {
+export default function Eight() {
+  const isDesktop = window.innerWidth > 768;
+
   useEffect(() => {
-    const isDesktop = window.innerWidth > 768;
     if (isDesktop) {
       gsap.registerPlugin(ScrollTrigger);
       let ctx = gsap.context(() => {
@@ -39,7 +40,7 @@ export default function eight() {
 
       return () => ctx.revert(); // <-- CLE
     }
-  }, []);
+  }, [isDesktop]);
 
   return (
     <section id='section1' className='h-full w-full lg:h-[500vh]'>
