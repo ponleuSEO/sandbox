@@ -8,7 +8,7 @@ export default function Chat({ text, image }: Prop) {
   return (
     <div>
       <p className='text-3xl text-blue-500'>{text}</p>
-      <div className='relative aspect-square w-96'>
+      <div className='relative aspect-square w-[1000px]'>
         {image && <Image src={image} alt='' fill />}
       </div>
     </div>

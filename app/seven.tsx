@@ -10,12 +10,12 @@ export default function Seven() {
             <Image src='/chip.png' alt='' fill />
           </div>
         </div>
-        <div className='  row-span-4 bg-blue-500'>hello</div>
-        <div className=' row-span-2 bg-green-500'>hello</div>
-        <div className=' row-span-4 bg-purple-500'>hello</div>
-        <div className=' row-span-2 bg-orange-500'>hello</div>
-        <div className='  row-span-2 bg-slate-400'>hello</div>
-        <div className=' row-span-2 bg-yellow-500'>hello</div>
+        <div className='row-span-4 bg-blue-500'>hello</div>
+        <div className='row-span-2 bg-green-500'>hello</div>
+        <div className='row-span-4 bg-purple-500'>hello</div>
+        <div className='row-span-2 bg-orange-500'>hello</div>
+        <div className='row-span-2 bg-slate-400'>hello</div>
+        <div className='row-span-2 bg-yellow-500'>hello</div>
       </div>
     </div>
   );
