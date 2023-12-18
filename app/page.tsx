@@ -10,16 +10,13 @@ import Six from './six';
 import Seven from './seven';
 import Eight from './eight';
 import Link from 'next/link';
-import Crypto from './crypto';
+import Shop from './payment/shop';
 
 export default function Home() {
   return (
     <>
       <main className='h-full'>
-        {/* <div className='h-screen bg-red-500 text-5xl'>Hello</div>
-        <Eight />
-        <div className='h-screen bg-red-500 text-5xl'>Hello</div> */}
-        <Crypto />
+        <Shop />
       </main>
     </>
   );

@@ -22,7 +22,8 @@
     "react-icons": "^4.11.0",
     "swiper": "^11.0.3",
     "tailwind-merge": "^2.0.0",
-    "unipayment-client": "^1.1.1"
+    "unipayment-client": "^1.1.1",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
