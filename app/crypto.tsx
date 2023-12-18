@@ -46,9 +46,11 @@ export default function Crypto() {
     app_id: '71a108a8-24c0-4a83-a417-b84269bc65d6',
     title: 'Test Invoice',
     description: 'Test Desc',
+    network: 'NETWORK_TRX',
+    pay_currency: 'USDT',
     lang: 'en',
-    price_amount: 100.0,
-    price_currency: 'USD',
+    price_amount: 10.0,
+    price_currency: 'CNY',
     notify_url: 'https://example.com/notify',
     redirect_url: 'https://example.com/redirect',
     order_id: '#123456',
@@ -57,23 +59,7 @@ export default function Crypto() {
   const url = apiHost + '/v' + apiVersion + '/invoices';
   const clientId = '10c4a8d4-b08d-4f30-beed-1fbf6442be21';
   const clientSecret = '7ogEvE6vxUqud8hj6Ffw4KsArvrWG4rPf';
-  // const res = axios.post(url, parameters, {
-  //   headers: {
-  //     'User-Agent': SDK_NAME,
-  //     Authorization:
-  //       'Hmac ' +
-  //       signRequest(
-  //         clientId,
-  //         clientSecret,
-  //         url,
-  //         'POST',
-  //         JSON.stringify(parameters)
-  //       ),
-  //     'Content-Type': 'application/json',
-  //     Accept: 'application/json',
-  //   },
-  // });
-  // console.log(res);
+
   const getInvoice = async () => {
     const res = await axios.post(url, parameters, {
       headers: {
