@@ -1,11 +1,12 @@
 'use client';
 import Link from 'next/link';
 import React, { useState } from 'react';
-import useGetInvoice from './useGetInvoice';
+import { useGetInvoice } from './useGetInvoice';
 
 type Parameters = {
   app_id: string;
   title: string;
+  description: string;
   network: string;
   pay_currency: string;
   lang: string;
@@ -22,21 +23,23 @@ function generateRandomNumber(min: number, max: number) {
 
 export default function Shop() {
   const [invoiceURL, setInvoiceURL] = useState('');
+  const appId = '71a108a8-24c0-4a83-a417-b84269bc65d6';
   const parameters: Parameters = {
-    app_id: '71a108a8-24c0-4a83-a417-b84269bc65d6',
-    title: 'Test Invoice', //Product Titleimport { v4 } from "uuid";
-
+    app_id: appId,
+    title: 'Facebook Account',
+    description:
+      'Meta企业广告账户 7户6主页 每个户日限额1000美金 不限制投放域名', //Product Title;
     network: 'NETWORK_TRX',
     pay_currency: 'USDT',
-    lang: 'en',
-    price_amount: 10.0, //Price
+    lang: 'zh-Hant',
+    price_amount: 0.1, //Price
     price_currency: 'CNY',
-    notify_url: 'https://example.com/notify',
-    redirect_url: 'https://example.com/redirect',
-    order_id: '#' + generateRandomNumber(100000, 999999).toString(),
+    notify_url: 'https://www.gogo-globalads.com/',
+    redirect_url: `https://www.gogo-globalads.com/`,
+    order_id: generateRandomNumber(100000, 999999).toString(),
   };
 
-  const putInvoice = async () => {
+  const PutInvoice = async () => {
     try {
       const invoice = await useGetInvoice({ parameters });
       if (!invoice) return;
@@ -54,7 +57,7 @@ export default function Shop() {
           </h1>
         </Link>
         <button
-          onClick={putInvoice}
+          onClick={PutInvoice}
           className='rounded-lg bg-red-400 px-4 py-2 hover:bg-red-600 hover:text-white'
         >
           Get Invoice

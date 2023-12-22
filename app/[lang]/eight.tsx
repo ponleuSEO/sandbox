@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-export default function eight() {
+export default function Eight() {
   useEffect(() => {
     const isDesktop = window.innerWidth > 768;
     if (isDesktop) {
@@ -13,7 +13,7 @@ export default function eight() {
           trigger: '#section1',
           pin: '#pinning',
           start: 'top top',
-          end: 'bottom bottom',
+          end: 'bottom bottom', 
         });
       });
 
@@ -45,7 +45,7 @@ export default function eight() {
     <section id='section1' className='h-full w-full lg:h-[500vh]'>
       <div
         id='pinning'
-        className='lg:bg-casino block h-full bg-yellow-100 lg:flex lg:h-screen lg:flex-row'
+        className='block h-full bg-yellow-100 lg:flex lg:h-screen lg:flex-row lg:bg-casino'
       >
         {[1, 2, 1, 2].map((data, index) => {
           return (

@@ -11,12 +11,17 @@ import Seven from './seven';
 import Eight from './eight';
 import Link from 'next/link';
 import Shop from './payment/shop';
-
-export default function Home() {
+import Ten from './ten';
+import { Locale } from '@/i18n.config';
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
   return (
     <>
       <main className='h-full'>
-        <Shop />
+        <Ten lang={lang} />
       </main>
     </>
   );
