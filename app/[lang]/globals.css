@@ -15,10 +15,6 @@
   }
 }
 
-body {
-  background-color: hsla(214, 100%, 85%, 0.094);
-}
-
 .bg-gradient {
   background: linear-gradient(
     0deg,
@@ -46,7 +42,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/bg2.png') center/cover fixed; /* Replace 'your-background-image.jpg' with your actual background image */
+  background: url('/bg2.png') center/cover fixed;
   z-index: -1;
 }
 
@@ -89,4 +85,39 @@ html {
     height: 100%;
     margin-bottom: 10rem;
   }
+}
+
+.container-full {
+  display: flex;
+  height: 100vh;
+  width: 500vw;
+  background: gray;
+  color: white;
+}
+.panel {
+  display: flex;
+  height: 100%;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* .panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+} */
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

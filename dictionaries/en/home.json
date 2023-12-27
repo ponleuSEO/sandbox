@@ -1,6 +1,9 @@
 {
+  "homepage": {
     "home": {
-        "title": "Pepsi vs. Coke",
-        "description": "Pepsi is better than Coke"
-    }
+      "title": "Pepsi vs. Coke",
+      "description": "Pepsi is better than Coke"
+    },
+    "navigation": ["Home", "Product", "Contact", "About"]
+  }
 }

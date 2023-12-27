@@ -1,6 +1,9 @@
 {
+  "homepage": {
     "home": {
-        "title": "百事可乐 vs 可口可乐",
-        "description": "百事可乐比可口可乐好"
-    }
+      "title": "百事可乐 vs 可口可乐",
+      "description": "百事可乐比可口可乐好"
+    },
+    "navigation": ["首页", "产品", "联络我们", "关于我们"]
+  }
 }

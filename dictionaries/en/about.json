@@ -1,6 +1,12 @@
 {
-    "about": {
-        "title": "Hello",
-        "description": "This is about page"
-    }
+  "about": {
+    "title1": "About",
+    "introduction": "Hello we are a company based in the US",
+    "companyName": "Clean and Cleaner",
+    "service": [
+      "Good and Affordable",
+      "Fast and Quick Clean up",
+      "Safe and Reliable"
+    ]
+  }
 }
